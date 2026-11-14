@@ -29,6 +29,7 @@ function log(msg) { process.stdout.write(`[inline-landing] ${msg}\n`); }
 function warn(msg) { process.stderr.write(`[inline-landing] WARN: ${msg}\n`); }
 
 function readBackendUrl() {
+  if (process.env.REACT_APP_BACKEND_URL) return process.env.REACT_APP_BACKEND_URL;
   try {
     const raw = fs.readFileSync(ENV_FILE, 'utf8');
     const line = raw.split('\n').find((l) => l.trim().startsWith('REACT_APP_BACKEND_URL='));

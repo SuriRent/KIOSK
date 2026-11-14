@@ -1,0 +1,14 @@
+.git
+**/.git
+**/node_modules
+**/build
+**/coverage
+**/.env
+**/.env.*
+**/*.env
+**/*.pem
+**/*.key
+**/credentials.json
+.screenshots
+.emergent
+test_reports
